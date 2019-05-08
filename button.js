@@ -48,6 +48,8 @@ function resourceEnter() {
 
 	var tags = ["shelter", "food", "clothing", "medical", "crisis", "legal"];
 	var tagsChecked = checkTags(tags);
+	
+	var finalAddress = addressEntered + ", " + cityEntered + " " + stateEntered + " " + zipEntered;
 
 	var locationEntered = {
 		latitude: 0,
@@ -70,7 +72,7 @@ function resourceEnter() {
 
 	axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
 		params: {
-			address: addressEntered,
+			address: finalAddress,
 			key: 'AIzaSyD6dp8MXiqbTKLhk5XfhnzczbxsJWtubuM'
 		}
 	})
