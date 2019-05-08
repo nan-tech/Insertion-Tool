@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	background-color: #FF0000;
+	background:
+		linear-gradient(rgba(69, 66, 244, 0.2), rgba(244, 66, 66, 0.2));
+
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-left: -40px;
+	font-weight: bold;
+	color: darkred;
+
+}
+
+body {
+	font-family: arial, verdana;
+}
+
+#msform {
+	width: 400px;
+	margin: 50px 33.33%;
+	text-align: center;
+}
+
+#msform fieldset{
+	background: lightblue;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 2px;
+	padding: 30px 30px;
+	box-sizing: border-box;
+	width: 90%;
+	margin: 0 10%;
+}
+
+.title {
+	font-size: 30px;
+	color: darkgreen;
+	margin-bottom: 10px;
+}
+
+
+
+#msform fieldset:not(:first-of-type) {
+	display:none;
+}
+
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+
+}
+
+#msform .next, #msform .authenticate, #msform .previous, #msform .submit {
+	width: 150px;
+	font-weight: bold;
+	border: none;
+	background: green;
+	color: white;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+#msform .checkbox {
+	width: 13px;
+	height: 13px;
+	padding: 0;
+  	margin:0;
+	vertical-align: bottom;
+	position: relative;
+	margin-right: 5px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
