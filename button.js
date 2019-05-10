@@ -47,6 +47,8 @@ function resourceEnter() {
 		
 		info: infoEntered
 	}	
+	
+	info = JSON.parse(JSON.stringify(info));  // removes properties with "undefined" value
 
 	axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
 		params: {
