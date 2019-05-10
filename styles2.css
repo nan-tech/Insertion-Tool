@@ -85,6 +85,15 @@ body {
 	display: inline-block;
 }
 
+.reset {
+	background-color: red;
+	margin-top: 50px;
+	cursor: pointer;
+	width: 150px;
+	font-weight: bold;
+	border: none;
+}
+
 
 
 

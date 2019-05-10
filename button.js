@@ -12,44 +12,22 @@ function checkTags(tags) {
 var lat = 0;
 var lng = 0;
 
-/*function geocode (addressEntered) {
-	axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
-		params: {
-			address: addressEntered,
-			key: 'AIzaSyD6dp8MXiqbTKLhk5XfhnzczbxsJWtubuM'
-		}
-	})
-	.then(function(response){
-
-		
-		lat = response.data.results[0].geometry.location.lat;
-		lng = response.data.results[0].geometry.location.lng;
-
-	})
-	.then(function(response){
-
-	})
-	.catch(function(error){
-		console.log(error);
-	});
-}*/
-
 function resourceEnter() {
 
-	var nameEntered = document.getElementById('name').value;
-	var addressEntered = document.getElementById('address').value;
-	var cityEntered = document.getElementById('city').value;
-	var stateEntered = document.getElementById('state').value;
-	var zipEntered = document.getElementById('zip').value;
-	var numberEntered = document.getElementById('number').value;
-	var emailEntered = document.getElementById('email').value;
-	var websiteEntered = document.getElementById('website').value;
-	var infoEntered = document.getElementById('info').value;
+	var nameEntered = (document.getElementById('name').value) ? (document.getElementById('name').value) : undefined;
+	var addressEntered = (document.getElementById('address').value) ? (document.getElementById('address').value) : undefined;
+	var cityEntered = (document.getElementById('city').value) ? (document.getElementById('city').value) : undefined;
+	var stateEntered = (document.getElementById('state').value) ? (document.getElementById('state').value) : undefined;
+	var zipEntered = (document.getElementById('zip').value) ? (document.getElementById('zip').value) : undefined;
+	var numberEntered = (document.getElementById('number').value) ? (document.getElementById('number').value) : undefined;
+	var emailEntered = (document.getElementById('email').value) ? (document.getElementById('email').value) : undefined;
+	var websiteEntered = (document.getElementById('website').value) ? (document.getElementById('website').value) : undefined;
+	var infoEntered = (document.getElementById('info').value) ? (document.getElementById('info').value) : undefined;
+
+	var finalAddress = addressEntered + ", " + cityEntered + " " + stateEntered + " " + zipEntered;
 
 	var tags = ["shelter", "food", "clothing", "medical", "crisis", "legal"];
 	var tagsChecked = checkTags(tags);
-	
-	var finalAddress = addressEntered + ", " + cityEntered + " " + stateEntered + " " + zipEntered;
 
 	var locationEntered = {
 		latitude: 0,
@@ -91,12 +69,9 @@ function resourceEnter() {
 		var resourceDetails = new DLib.Resources.Resource(nameEntered, tagsChecked, locationEntered);
 		resourceDetails.setDetails(info);
 		DLib.Resources.submitResource(resourceDetails);
-		alert("Information Submitted. Thank you!")
+		alert("Information Submitted. Thank you!");
 	})
 	.catch(function(error){
 		console.log(error);
 	});	
-
-
-		
 }
